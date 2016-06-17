@@ -1,0 +1,79 @@
+
+body{
+	background-color: #363f45;
+	display: block;
+}
+
+/* ================================================ header styles */
+
+.header{
+	margin:auto;
+	margin-top: 30px;	
+	width: 60%;
+	background-color: #ffffcc;	
+}
+
+.header-element{
+	width:25%;
+	max-width:250px
+}
+
+/* ================================================ Navigation bar styles */
+
+.nev{
+	width:63%;
+	height: 50px;
+	margin:auto;
+	background-color: #FF5722;
+}
+
+.nev_title{
+	margin:auto;
+	padding: 5px;
+	color: #212121;
+	font-weight: bold;
+	height: 50px;
+}
+
+.nev ul{
+	list-style-type: none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	
+}
+
+.nev li{
+	display: block;
+	float:left;
+	align-self: center;
+}
+
+.nev li a {
+	display:inline-block;
+	text-align:center;
+	padding:15px;
+	text-decoration:none;
+	color:#212121;
+	font-weight: bold;
+	font-size:1.1em;
+	transition: 0.2s;
+
+}
+
+.nev li a:hover{
+	background-color: #E64A19;
+	color: #ffffcc;
+}
+
+/* ================================================== Container Styles */
+
+.container{
+	margin:auto;
+	width: 60%;
+	background-color: #ffffcc;
+}
+
+.container-inside{
+	padding: 10px;
+}
