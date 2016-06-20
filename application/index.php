@@ -35,9 +35,9 @@
 					<input type="password" name="password" placeholder="password" required><br>
 					<input type="submit" value="Login">
 				</form>
-				<a href="">Register</a>
+				<a href="user/register.php">Register</a>
 				<hr>
-				<a href="" style="padding:10px;">Login as Administrator</a>
+				<a href="admin/login.php" style="padding:10px;">Login as Administrator</a>
 				</center>
 			</div>
 		</div>

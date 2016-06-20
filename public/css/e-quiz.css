@@ -1,8 +1,21 @@
 
 body{
-	background-color: #363f45;
-	/* display: inline-block; */
+	background-color: #363f45; 
 	font-family:sans-serif;
+}
+
+a {
+	text-decoration: none;
+	border: 1px solid #ccc;
+	padding:5px;
+	color: #E64A19;
+	font-size: .8em;
+	transition: .2s;
+}
+
+a:hover{
+	color: #FF5722;
+	font-size: 1em;
 }
 
 /* ================================================ header styles */
@@ -94,6 +107,11 @@ body{
 	padding: 10px;
 }
 
+.block_reg_form{
+	width: 60%;
+	margin:auto;
+	padding: 10px;
+}
 
 /* ================================================ Form */
 
@@ -133,5 +151,20 @@ input[type=submit],select{
 input[type=submit]:hover{
 	background-color: #FF5722;
 	border-radius: 6px;
+}
+
+.block_reg_form input[type=text],select{
+	width: 40%;
+	padding: 5px 8px;
+}
+
+.block_reg_form input[type=password],select{
+	width: 70%;
+	padding: 5px 8px;
+
+}
+
+.block_reg_form label{
+	font-size: .9em;
 }
 
