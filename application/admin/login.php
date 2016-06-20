@@ -14,7 +14,7 @@
 			$password = $_POST['password'];
 
 			//Establish connection 
-			$conn = mysqli_connect("localhost","Emalsha","1994224er","e_qize_db");
+			$conn = mysqli_connect("localhost","Emalsha","1994224er","e_quiz_db");
 
 			if (!$conn) {
 				$error= "Mysql database connection error";
