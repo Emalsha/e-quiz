@@ -1,14 +1,15 @@
 
 body{
 	background-color: #363f45;
-	display: block;
+	/* display: inline-block; */
+	font-family:sans-serif;
 }
 
 /* ================================================ header styles */
 
 .header{
 	margin:auto;
-	margin-top: 30px;	
+	margin-top: 20px;	
 	width: 60%;
 	background-color: #ffffcc;	
 }
@@ -72,8 +73,65 @@ body{
 	margin:auto;
 	width: 60%;
 	background-color: #ffffcc;
+	transition: .3s;
+	
 }
 
 .container-inside{
 	padding: 10px;
 }
+
+.block{
+	width: 60%;
+	margin:auto;
+}
+
+.block_bordered{
+	width: 60%;
+	margin:auto;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 10px;
+}
+
+
+/* ================================================ Form */
+
+input[type=text],select{
+	width: 70%;
+	padding: 8px 10px;
+	margin:8px 0;
+	display: inline-block;
+	border:1px solid #ccc;
+	border-radius: 2px;
+	box-sizing: border-box;
+}
+
+input[type=password],select{
+	width: 70%;
+	padding: 8px 10px;
+	margin:8px 0;
+	display: inline-block;
+	border:1px solid #ccc;
+	border-radius: 2px;
+	box-sizing: border-box;
+}
+
+input[type=submit],select{
+	width: 70%;
+	padding: 8px 10px;
+	margin:8px 0;
+	display: inline-block;
+	border:1px solid #ccc;
+	border-radius: 2px;
+	box-sizing: border-box;
+	background-color: #E64A19;
+	color: white;
+	transition: .3s;
+}
+
+input[type=submit]:hover{
+	background-color: #FF5722;
+	border-radius: 6px;
+}
+
