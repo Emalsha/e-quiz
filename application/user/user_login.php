@@ -1,5 +1,6 @@
 <?php 
 	
+	include_once("../database/db.conf");
 	session_start();
 	$error = "";
 
@@ -11,13 +12,6 @@
 			//define username and password
 			$username = $_POST['username'];
 			$password = $_POST['password'];
-
-			//Establish connection 
-			$conn = mysqli_connect("localhost","Emalsha","1994224er","e_quiz_db");
-
-			if (!$conn) {
-				$error= "Mysql database connection error";
-			}
 
 			//To protect mysql injection 
 			$username = stripslashes($username);

@@ -10,8 +10,8 @@
 </head>
 <body>
 	<?php
-	include("/includes/header.php");
-	include("/includes/nav_title.php");
+	include("includes/header.php");
+	include("includes/nav_title.php");
 	?>
 	
 	<div class="container">

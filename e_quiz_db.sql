@@ -20,6 +20,10 @@ SET time_zone = "+00:00";
 -- Database: `e_quiz_db`
 --
 
+CREATE DATABASE e_quiz_db;
+
+USE e_quiz_db;
+
 -- --------------------------------------------------------
 
 --
