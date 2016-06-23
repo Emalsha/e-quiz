@@ -7,21 +7,9 @@
 </head>
 <body>
 	
-	<div class="header">
-		<center>
-			<a href="#"><img src="../../public/img/logo.png" alt="e-qize logo" style="width:20%;padding:10px;"></a>
-		</center>
-	</div>
+	<?php include("../includes/header.php"); ?>
+	<?php require("../includes/user_nav.php"); ?>
 
-	<div class="nev">
-		<ul>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">Setting</a></li>
-			<li><a href="#">Question</a></li>
-			<li><a href="#">Report</a></li>
-		</ul>
-
-	</div>
 
 	<div class="container">
 		<div class="container-inside">

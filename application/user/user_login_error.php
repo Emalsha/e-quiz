@@ -32,7 +32,7 @@
 				</form>
 				<a href="register.php">Register</a>
 				<hr>
-				<a href="" style="padding:10px;">Login as Administrator</a>
+				<a href="../admin/login.php" style="padding:10px;">Login as Administrator</a>
 				</center>
 			</div>
 		</div>

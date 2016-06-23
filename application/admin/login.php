@@ -1,24 +1,18 @@
 <?php 
-	
+	require_once("../database/db.conf");
 	session_start();
 	$error = "";
 	$title = "Administrator Login" ;
 
-	if (isset($_POST['username']) && isset($_POST['password'])) {
+	if (isset($_POST['submit'])) {
 		if (empty($_POST['username']) || empty($_POST['password'])) {
 			$error = "Username or Password is invalid";
-			/*header("location:user_login_error.php");*/
 		}else{
 			//define username and password
 			$username = $_POST['username'];
 			$password = $_POST['password'];
 
-			//Establish connection 
-			$conn = mysqli_connect("localhost","Emalsha","1994224er","e_quiz_db");
-
-			if (!$conn) {
-				$error= "Mysql database connection error";
-			}
+			
 
 			//To protect mysql injection 
 			$username = stripslashes($username);
@@ -28,7 +22,7 @@
 			$password = mysqli_real_escape_string($conn,$password);
 
 			//Query
-			$query ="SELECT username,password FROM users where username = '$username' AND password = '$password'";
+			$query ="SELECT username,password FROM admin_user where username = '$username' AND password = '$password'";
 
 			//Result
 			$res = mysqli_query($conn,$query);
@@ -38,16 +32,14 @@
 
 			//Check are there any results
 			if ($rows == 1) {
-				$_SESSION['login_user']=$username; //Initialize session
+				$_SESSION['login_admin']=$username; //Initialize session
 				header("location:home.php"); //rederect to admin home
 			}else{
-				$error = "Username or Password is invalid.";				
-				//header("location:user_login_error.php");
+				$error = "Username or Password is invalid.";
+				echo "<script type='text/javascript'>alert('Username or password is invalid.');</script>";
 			}
 		}
-	}else{
-		//header("location:../index.php");
-	} 	
+	}	
 		
 ?>
 <html lang="en">
@@ -65,7 +57,7 @@
 	<div class="container">
 		<div class="container-inside">
 			<div class="block">
-				<h3>Login as administrator, create papers and publish it.</h3>
+				<h4>Login as administrator, create papers and publish it.</h4>
 			</div>
 
 			<div class="block_bordered">
@@ -75,7 +67,7 @@
 					<input type="text" name="username" placeholder="username" required><br>
 					<label for="password">Password </label><br>
 					<input type="password" name="password" placeholder="*********" required><br>
-					<input type="submit" value="Login">
+					<input type="submit" name="submit" value="Login">
 				</form>
 				<a href="register.php">Register</a>
 				<hr>
