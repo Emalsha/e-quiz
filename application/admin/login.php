@@ -22,10 +22,13 @@
 			$password = mysqli_real_escape_string($conn,$password);
 
 			//Query
-			$query ="SELECT username,password FROM admin_user where username = '$username' AND password = '$password'";
+			$query ="SELECT username,password,admin_id FROM admin_user where username = '$username' AND password = '$password'";
 
 			//Result
 			$res = mysqli_query($conn,$query);
+
+			//get data
+			$data = mysqli_fetch_assoc($res);
 
 			//Number of results
 			$rows = mysqli_num_rows($res);
@@ -33,6 +36,7 @@
 			//Check are there any results
 			if ($rows == 1) {
 				$_SESSION['login_admin']=$username; //Initialize session
+				$_SESSION['admin_id']=$data['admin_id'];
 				header("location:home.php"); //rederect to admin home
 			}else{
 				$error = "Username or Password is invalid.";

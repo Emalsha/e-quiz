@@ -8,14 +8,14 @@
 			$fname = mysqli_real_escape_string($conn,$_POST['fname']);
 			$lname = mysqli_real_escape_string($conn,$_POST['lname']);
 			$email = mysqli_real_escape_string($conn,$_POST['email']);
-			$username = mysqli_real_escape_string($conn,$_POST['username']);
+			$username = mysqli_real_escape_string($conn,$_POST['uname']);
 			$password = mysqli_real_escape_string($conn,$_POST['password']);
 
 			$qry_to_check_usrname = "SELECT username FROM users WHERE username='$username'";
 
-			$results = mysqli_query($conn,$qry_to_check_usrname);
+			$results = mysqli_num_rows(mysqli_query($conn,$qry_to_check_usrname));
 
-			if ($results == 1 | $username="" ) {
+			if ($results == 1 | $username=="" ) {
 				echo "<script type='text/javascript'> alert('Sorry. There is already exist account to this username. Please try another username.');</script>";
 			}else{
 
@@ -83,8 +83,10 @@
 				<form action="" method="post" onsubmit="return checkForm()">
 					<label for="fname">First Name : </label><br>
 					<input type="text" name="fname" id="fname" placeholder="ex : John" ><br>
+					
 					<label for="lname">Last Name : </label><br>
 					<input type="text" name="lname" placeholder="ex : Smith" ><br>
+					
 					<label for="email">E-mail : </label><br>
 					<input type="email" name="email" id="email" placeholder="sample@mail.com" required><br>
 
@@ -104,7 +106,6 @@
 								<input type="password" id="confirm_password" name="confirm_password" placeholder="********" required><br>
 							</td>
 						</tr>
-
 					</table>					
 					
 					<input type="submit" name="submit" value="Register" style="width:40%; float:right;">
