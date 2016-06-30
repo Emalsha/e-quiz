@@ -21,18 +21,19 @@
 		$testName = mysqli_real_escape_string($conn,$_POST['testName']);
 		$admin_id = $_SESSION['admin_id'];
 
-		//check whether test are their same name
 		$qry_to_check = "SELECT test_id,test_name,description FROM test WHERE admin_id='$admin_id' AND (test_name='$testName' OR test_id = '$testName')";
+		echo "<script type='text/javascript'> alert('$qry_to_check')</script>";
 		$result = mysqli_query($conn,$qry_to_check);
 		$num_of_row = mysqli_num_rows($result);
+
 			
 		if ($num_of_row>0) {
 			$test_result = mysqli_fetch_assoc($result);
 			$descript = $test_result['description']; 
-			echo "<script type='text/javascript'> alert('ekk hri')</script>";
+			echo "<script type='text/javascript'> alert('ekk hri')</script>";			
 		}else{
 			$descript = "No Test found.";
-			
+
 		}
 	}
 
@@ -68,12 +69,12 @@
 							<td><input type="text" name="testName" placeholder="Test Name or Test Id" style="width: 90%;" required></td>
 							<td><input type="submit" name="search" value="Search" ></td>
 						</tr>
+
 						<tr>
 							<td colspan="3">
 								<label for="testDesc" style="font-size: .8em;">
 									<?php 
 										if ($descript != "") {
-											echo "<script type='text/javascript'> alert($description);</script>";
 											echo 'Description : '.$descript;	
 										}
 									?> 
