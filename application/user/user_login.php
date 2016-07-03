@@ -32,7 +32,7 @@
 			//Check are there any results
 			if ($rows == 1) {
 				$_SESSION['login_user']=$username; //Initialize session
-				header("location:user_question.php"); //rederect to user home
+				header("location:home.php"); //rederect to user home
 			}else{
 				$error = "Username or Password is invalid.";				
 				header("location:user_login_error.php");

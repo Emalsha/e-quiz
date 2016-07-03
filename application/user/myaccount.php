@@ -13,8 +13,8 @@
 
 	<div class="container">
 		<div class="container-inside">
-			<h1>Welcome to e-qize</h1>
-			<p>e-qize is a online question generator service.You can create online question paper and publis it to others.</p>
+			<h1>Sorry !. This page is under constructions. </h1>
+			
 		</div>
 	</div>
 </body>

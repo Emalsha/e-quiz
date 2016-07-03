@@ -175,3 +175,12 @@ input[type=submit]:hover{
 }
 
 
+/* ================================================ Table - Stripe table*/
+
+.strip_table tr:nth-child(even){		
+	background-color:#ffffff;
+}
+
+.strip_table td{
+	padding:5px;
+}
