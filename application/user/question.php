@@ -46,7 +46,7 @@
 					}
 				?>
 			</div>	
-
+			
 <?php
 			
 	if (isset($_POST['start']) & isset($_SESSION['testName'])) {
